@@ -5,6 +5,7 @@ In order to publish files, I'll use Stackedit to compose in markdown or html. Ot
 
 Recommendations for using Github as a simple web host.
 ============
+
 - the main file should be named index.html
 - images should be put in an /images subfolder
 - styles can be saved in a /styles folder or kept in the main directory. BUt you need to keep track of this and point to the right file. 
@@ -42,3 +43,9 @@ Publishing Settings
 Markdown format will keep your content but not display well.
 
 Template mode publishes HTML with the current CSS styles embedded. Or you can edit the template in Stackedit, pointing to a specific local or external CSS. 
+
+### Editing Styles
+1. Create and upload an external style sheet (ex. style.css).  
+2. In StackEdit, modify the settings / advanced / default template, so that it points to your stylesheet and not the default stackedit one.
+
+
