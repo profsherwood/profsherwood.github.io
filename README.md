@@ -3,14 +3,16 @@ This is a simple readme, the first file. It's a convention to use this to store 
 
 In order to publish files, I'll use Stackedit to compose in markdown or html. Other files can also be uploaded here, such as images or pdfs. You are limited to 1 GB.  Web uploads are usually capped at 25mb per file. 
 
-Recommendations
+Recommendations for using Github as a simple web host.
 ============
 - the main file should be named index.html
 - images should be put in an /images subfolder
 - styles can be saved in a /styles folder or kept in the main directory. BUt you need to keep track of this and point to the right file. 
 
-
 Stackedit can be configured to publish directly to Github. See directions below
+
+StackEdit strips an external CSS from the file upon publishing. Instead, go to "settings" / "advanced" to add the appropriate CSS external file sheet link to the template. 
+
 
 Stackedit Configuration
 =====================
