@@ -15,7 +15,7 @@ Stackedit can be configured to publish directly to Github. See directions below
 StackEdit strips an external CSS from the file upon publishing. Instead, go to "settings" / "advanced" to add the appropriate CSS external file sheet link to the template. 
 
 
-Stackedit Configuration
+StackEdit Configuration
 =====================
 
 Repository: 
