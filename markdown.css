@@ -1,7 +1,6 @@
 body{
     margin: 0 auto;
     background-color:white;
-
 /*	--------- FONT FAMILY --------
  	following are some optional font families. Usually a family 
 	is safer to choose than a specific font, 
@@ -40,14 +39,8 @@ p   {
      color: #333333
 }
 
-
 h1, h2, h3, h4 {
-/    color: #111111;
     font-weight: 400;
-}
-
-h2, h3, h4, h5, p {
-    margin-bottom: 25px;
     padding: 0;
 }
 
@@ -59,20 +52,23 @@ h1 {
 }
 
 h2 {
-    font-size:150%
-/    margin: 24px 0 6px; 
+    font-size:150%;
+/   margin: 24px 0 6px; 
+    margin-bottom: 25px;	
 }
 
 h3 {
-    font-size:120%
+    font-size:120%;
+	margin-bottom: 25px;
 }
+
 h4 {
     font-size:100%
     font-variant:small-caps;
-
 }
+
 h6 {
-	border-left:.5em solid #eee;
+    border-left:.5em solid #eee;
     padding: 0 1em;
     font-size:80%
     font-weight: 100;
@@ -84,6 +80,11 @@ h5 {
     color:red;
     font-variant:small-caps;
 }
+
+/*
+The following styles pertain to the way that hyperlinks are styled, 
+including differences between active and visited links.
+*/
 a {
     color: grey;
     margin: 0;
@@ -101,6 +102,10 @@ a:hover {
 	background-color: black;
 }
 
+/* 
+Lists come in several types, ordered (or numbered) and unordered (bullets).  You can 
+use styles to change the appearance of the bullets, the spacing, margins etc. 
+*/
 ul, ol {
     padding: 0;
     margin: 0px 0px 0px 50px;
@@ -128,11 +133,7 @@ code {
     line-height: 1.5;
     font-size: 13px;
 }
-aside {
-    display: block;
-    float: right;
-    width: 390px;
-}
+
 blockquote {
     border-left:.5em solid #eee;
     padding: 0 1em;
