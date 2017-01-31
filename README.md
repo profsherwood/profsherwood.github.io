@@ -20,9 +20,13 @@ master
 File Path:
 ---------
 filename.html
+
 or
+
 filename.md
+
 or
+
 folder/filename.html
 
 Publishing Settings
