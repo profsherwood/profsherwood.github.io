@@ -1,10 +1,16 @@
 # profsherwood.github.io
-This is a simple readme, the first file.
+This is a simple readme, the first file. It's a convention to use this to store relevant information that may or may not be accessed frequently. 
 
-This is my Github readme page. 
+In order to publish files, I'll use Stackedit to compose in markdown or html. Other files can also be uploaded here, such as images or pdfs. You are limited to 1 GB.  Web uploads are usually capped at 25mb per file. 
 
-In order to publish files, I'll use Stackedit to compose in markdown or html. 
-Stackedit can be configured to publish directly to Github.
+Recommendations
+============
+- the main file should be named index.html
+- images should be put in an /images subfolder
+- styles can be saved in a /styles folder or kept in the main directory. BUt you need to keep track of this and point to the right file. 
+
+
+Stackedit can be configured to publish directly to Github. See directions below
 
 Stackedit Configuration
 =====================
