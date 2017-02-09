@@ -4,8 +4,8 @@
 body{
     margin: 0 auto;
     background-color:white;
-/    font-family:Georgia, Palatino, serif;
-    font-family: 'Autour One';font-size: 22px;
+    font-family:Georgia, Palatino, serif;
+/    font-family: 'Autour One';font-size: 22px;
     color: #333333; /* dark gray not black, color of base font */
     max-width: 800px;
     padding: 30px;
