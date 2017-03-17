@@ -11,6 +11,13 @@ l {
   
 }
 
+/* new add for test */
+
+lg {
+display: block;
+padding-top:.5em;
+padding-bottom: .5em;
+}
 
 
 lg[type='stanza']::before{

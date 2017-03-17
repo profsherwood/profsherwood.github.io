@@ -4,64 +4,14 @@ l {
   word-break: break-all;
 }
 
-pause[type='brief']::before {
-	color: red;
-    content: " || ";
-}
 
-pause[type='medium']::before {
-	color: red;
-    content: " ||| ";
-}
-
-pause[type='long']::before {
-	color: red;
-    content: " || - - || ";
-}
-
-
-lg[type='stanza']::before{
-    content: url(bracket.png);
-}
-
-lg[type='stanza']::after{
-	display:block;
-	 color:green;
-    content: url(cbracket.png);
-}
-
-shift[new='desc']::after {
-	display: block;
-    content: url(desc.png);
-/*
-	display: inline-block;
-	background: linear-gradient(to right, red , yellow); 
-	*/
+lg {
+display: block;
+padding-top:.5em;
+padding-bottom: .5em;
 
 }
 
-shift[new='asc']::after {
-	display: block;
-    content: url(asc.png);
-/*
-	display: inline-block;
-	background: linear-gradient(to right, red , yellow); 
-	*/
-
-}
-
-
-shift[feature='rhythm'] {
-	/*display: inline;*/
-    color: black;
-	background: white;
-    border: 1px solid blue;   
-}
-
-shift [feature="loud" new="p"]
-{
-
-}
 
 
 

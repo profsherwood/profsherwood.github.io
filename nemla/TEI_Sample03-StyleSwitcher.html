@@ -1,0 +1,224 @@
+<html>
+<head>
+
+
+<link rel="stylesheet" type="text/css" href="TEI_Style.css" title="Basic">
+<link rel="stylesheet" type="text/css" href="TEI_Style_VolPause.css" title="VolPause">
+<link rel="stylesheet" type="text/css" href="TEI_Style_TempLoud.css" title="TempLoud">
+<link rel="stylesheet" type="text/css" href="TEI_Style_VolPauseTempLoud.css" title="VolPauseTempLoud">
+
+</head>
+<body>
+<form>
+<input type="submit" onclick="switch_style('Basic');return false;" name="theme" value="Basic" id="Basic">
+<input type="submit" onclick="switch_style('VolPause');return false;" name="theme" value="VolPause" id="VolPause">
+<input type="submit" onclick="switch_style('TempLoud');return false;" name="theme" value="TempLoud" id="TempLoud">
+<input type="submit" onclick="switch_style('VolPauseTempLoud');return false;" name="theme" value="VolPauseTempLoud" id="VolPauseTempLoud">
+</form>
+
+
+
+<h1>Sample Transcription</h1>
+<h2> A few Characteristics</h2>
+
+<lg type="stanza">
+<l>The stanza begins with a line</l>
+<l>And they follow, two, three</l>
+<l>At a time.</l>
+</lg>
+
+<lg type="stanza">
+
+<l> The next line is rising
+<shift feature="pitch" new="asc"></l>
+<l>But then bumps with <pause type="brief"/> a pause</l>
+</lg>
+
+<lg type="stanza">
+<l>And in closing it goes</l>
+<l>Down, <pause type="brief"/> down,</l>
+<l> downward <pause type="medium"/>it rolls.
+<shift feature="pitch" new="desc"></l>
+</lg>
+
+<lg type="stanza">
+<l>How cliche</l>
+<l>A demo <pause type="long"/> that rhymes.</l>
+</lg>
+
+
+<hr />
+<h2>Key</h2>
+<lg type="stanza">
+<l>This marks a stanza.</l>
+</lg>
+
+<l>
+Ascending Pitch<shift feature="pitch" new="asc"></l>
+</l>
+
+<l>
+Descending Pitch<shift feature="pitch" new="desc"></l>
+</l>
+
+<l>
+Brief <pause type="brief"/>pause </l>
+
+<l>
+
+<l>
+Medium <pause type="medium"/>pause </l>
+
+<l>
+
+<l>
+Long <pause type="long"/>pause </l>
+
+<l>
+
+<lg type="stanza">
+
+<l>This stanza will test whether a style shifts across lines</l>
+<shift feature="loud" new="ff">
+<l>This line is shifted loud ff</l>
+<l>This line has no style but is included in the loud ff</l>
+</shift>
+<l>This line is outside the shift</l>
+</lg>
+
+<lg type="stanza">
+<l>
+<shift feature="tempo" new="m">
+A line with a tempo that is normal or moderato "m"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="l">
+A line with a tempo that is slow or lento "l"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="ll">
+A line with a tempo that is very slow or lentissimo "ll"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="a">
+A line with a tempo that is quick or allegro "a"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="aa">
+A line with a tempo that is very quick or allegrissimo "aa"
+</shift>
+</l>
+</lg>
+
+
+
+<lg type="stanza">
+<h1>Testing combination of tempo and volume marking</h1>
+<hr/>
+
+<l>
+<shift feature="tempo" new="m">
+A line with a tempo that is normal or moderato "m"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="l">
+<shift feature="loud" new="ff">
+A line with a tempo that is slow or lento "l" but also loud.
+</shift></shift>
+</l>
+
+<l>
+<shift feature="tempo" new="ll">
+A line with a tempo that is very slow or lentissimo "ll"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="a">
+A line with a tempo that is quick or allegro "a"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="aa">
+A line with a tempo that is very quick or allegrissimo "aa"
+</shift>
+</l>
+</lg>
+
+</body>
+
+<!- This is a script for the style switcher. Paste on any page needing the styles. Checkbox needs to be at the top for selecting->
+<script>// *** TO BE CUSTOMISED ***
+
+var style_cookie_name = "style" ;
+var style_cookie_duration = 30 ;
+var style_domain = "profsherwood.github.io" ;
+
+// *** END OF CUSTOMISABLE SECTION ***
+// You do not need to customise anything below this line
+
+function switch_style ( css_title )
+{
+// You may use this script on your site free of charge provided
+// you do not remove this notice or the URL below. Script from
+// https://www.thesitewizard.com/javascripts/change-style-sheets.shtml
+  var i, link_tag ;
+  for (i = 0, link_tag = document.getElementsByTagName("link") ;
+    i < link_tag.length ; i++ ) {
+    if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
+      link_tag[i].title) {
+      link_tag[i].disabled = true ;
+      if (link_tag[i].title == css_title) {
+        link_tag[i].disabled = false ;
+      }
+    }
+    set_cookie( style_cookie_name, css_title,
+      style_cookie_duration, style_domain );
+  }
+}
+function set_style_from_cookie()
+{
+  var css_title = get_cookie( style_cookie_name );
+  if (css_title.length) {
+    switch_style( css_title );
+  }
+}
+function set_cookie ( cookie_name, cookie_value,
+    lifespan_in_days, valid_domain )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+    var domain_string = valid_domain ?
+                       ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name +
+                       "=" + encodeURIComponent( cookie_value ) +
+                       "; max-age=" + 60 * 60 *
+                       24 * lifespan_in_days +
+                       "; path=/" + domain_string ;
+}
+function get_cookie ( cookie_name )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+    var cookie_string = document.cookie ;
+    if (cookie_string.length != 0) {
+        var cookie_value = cookie_string.match (
+                        '(^|;)[\s]*' +
+                        cookie_name +
+                        '=([^;]*)' );
+        return decodeURIComponent ( cookie_value[2] ) ;
+    }
+    return '' ;
+}</script>
+
+</html>
+
