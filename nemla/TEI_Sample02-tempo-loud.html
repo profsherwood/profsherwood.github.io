@@ -9,6 +9,7 @@ TEI_Style_TempLoud.css">
 <h1>Sample Transcription</h1>
 <h2> Loudness and Tempo</h2>
 
+
 <shift feature="loud" new="normal">
 
 <lg type="stanza">
@@ -18,49 +19,131 @@ TEI_Style_TempLoud.css">
 </lg>
 
 <lg type="stanza">
-<l>
-<shift feature="loud" new="pp">
+<l><shift feature="loud" new="pp">
 The stanza begins with a pp line.</shift></l>
 <shift feature="loud" new="p">
-<l>3 But the next line grows to piano</l>
+<l>3 But the next line grows to a volume of <i>piano</i></l>
 </shift>
 
 <shift feature="loud" new="normal">
 
-<l>hen normal or mp/mf</l>
+<l>Then it returns to mf or "normal" in markup.</l>
 </shift>
-
 
 </lg>
 
 <lg type="stanza">
 <shift feature="loud" new="f">
-
 <l>This stanza begins with a forte line</l>
 </shift>
 
 <shift feature="loud" new="ff">
-<l>Then it goes into a line fortissimo </l>
+<l>Then it goes into a line of fortissimo </l>
 </shift>
 
 <shift feature="loud" new="normal">
 <l>And ends with a line that goes from normal to
-<shift feature="loud" new="ff">
-fortissimo
+<shift feature="loud" new="ff"> fortissimo</shift>
 <shift feature="loud" new="normal">
-to normal
+to normal</shift>
 <shift feature="loud" new="p">
-to soft
+to soft</shift>
 <shift feature="loud" new="pp">
 to softer.
-
-
-
 </l>
-</shift>
+<l>
+ is a final line with no style. Is it normal? 	
+</l>
 </lg>
 
 
+<lg type="stanza">
+
+<l>This stanza will test whether a style shifts across lines</l>
+<shift feature="loud" new="ff">
+<l>This line is shifted loud ff</l>
+<l>This line has no style but is included in the loud ff</l>
+</shift>
+<l>This line is outside the shift</l>
+</lg>
+
+<lg type="stanza">
+<l>
+<shift feature="tempo" new="m">
+A line with a tempo that is normal or moderato "m"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="l">
+A line with a tempo that is slow or lento "l"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="ll">
+A line with a tempo that is very slow or lentissimo "ll"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="a">
+A line with a tempo that is quick or allegro "a"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="aa">
+A line with a tempo that is very quick or allegrissimo "aa"
+</shift>
+</l>
+</lg>
+
+
+
+<lg type="stanza">
+<h1>Testing combination of tempo and volume marking</h1>
+<hr/>
+
+<l>
+<shift feature="tempo" new="m">
+A line with a tempo that is normal or moderato "m"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="l">
+<shift feature="loud" new="ff">
+A line with a tempo that is slow or lento "l" but also loud.
+</shift></shift>
+</l>
+
+<l>
+<shift feature="tempo" new="ll">
+A line with a tempo that is very slow or lentissimo "ll"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="a">
+A line with a tempo that is quick or allegro "a"
+</shift>
+</l>
+
+<l>
+<shift feature="tempo" new="aa">
+A line with a tempo that is very quick or allegrissimo "aa"
+</shift>
+</l>
+</lg>
+
+
+
+
+
+
+
+</shift>
 </body>
 </html>
 

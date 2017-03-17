@@ -1,0 +1,129 @@
+body {
+font-family: arial, sans-serif;
+color: black;
+}
+
+l {
+  display: block;
+  word-break: break-all;
+ /* font-size: 100%; */
+ /* color: black; */
+  
+}
+
+pause[type='brief']::before {
+	color: red;
+    content: " || ";
+}
+
+pause[type='medium']::before {
+	color: red;
+    content: " ||| ";
+}
+
+pause[type='long']::before {
+	color: red;
+    content: " || - - || ";
+}
+
+
+lg[type='stanza']::before{
+    content: url(bracket.png);
+}
+
+lg[type='stanza']::after{
+	display:block;
+	 color:green;
+    content: url(cbracket.png);
+}
+
+shift[new='desc']::after {
+	display: block;
+    content: url(desc.png);
+/*
+	display: inline-block;
+	background: linear-gradient(to right, red , yellow); 
+	*/
+
+}
+
+shift[new='asc']::after {
+	display: block;
+    content: url(asc.png);
+/*
+	display: inline-block;
+	background: linear-gradient(to right, red , yellow); 
+	*/
+
+}
+
+/* in progress
+shift[feature='rhythm'] {
+    color: black;
+	background: white;
+    border: 1px solid blue;   
+}
+*/
+
+
+/* --------------------working on loudness --------------------*/
+
+shift [new='pp']{
+  font-size: 70%;
+  color: blue;
+
+}
+
+
+shift [new='p'] {
+  font-size: 85%;
+  color: blue;
+}
+
+
+shift [new='normal'] {
+  font-size: 100%;
+  color: black;
+
+}
+
+
+shift [new='f'] {
+  font-size: 150%;
+  color: red;
+
+}
+
+shift [new='ff'] {
+  font-size: 250%;
+  color: red;
+}
+
+
+/*
+shift [new='dimin'] {
+ ;
+}
+
+shift [new='cresc'] {
+ ;
+}
+
+*/
+
+
+/* font-stretch:condensed;
+ font-weight:200; */
+ /* other values font-stretch:
+ semi-condensed
+ normal
+ semi-expanded
+ expanded
+ extra-expanded
+ ultra-expanded;
+ */
+
+
+
+
+
