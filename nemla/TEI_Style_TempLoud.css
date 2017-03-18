@@ -1,3 +1,4 @@
+@import url("TEI_Style.css");
 body {
 font-family: arial, sans-serif;
  color: black;
@@ -8,7 +9,7 @@ l {
   word-break: break-all;
  /* font-size: 100%; */
  /* color: black; */
-  
+
 }
 
 /* new add for test */
@@ -100,7 +101,7 @@ shift [new='aa']{
 
 
 
-/* tempo tags 
+/* tempo tags
 
 tempo new values include:
 m > moderato (normal)
@@ -111,7 +112,7 @@ l >  lento (slow)
 ll > very slow
 
 
---------these I haven't yet added to styles: 
+--------these I haven't yet added to styles:
 rall > rallentando (getting slower);
 acc > accelerando (getting faster)
 
@@ -141,8 +142,3 @@ shift [new='cresc'] {
  extra-expanded
  ultra-expanded;
  */
-
-
-
-
-

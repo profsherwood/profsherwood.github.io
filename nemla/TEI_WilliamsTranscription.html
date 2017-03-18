@@ -1,0 +1,144 @@
+<html>
+<head>
+
+
+<link rel="stylesheet" type="text/css" href="TEI_Style.css" title="Basic">
+<link rel="stylesheet" type="text/css" href="TEI_Style_PitchPause.css" title="PitchPause">
+<link rel="stylesheet" type="text/css" href="TEI_Style_TempLoud.css" title="TempLoud">
+<link rel="stylesheet" type="text/css" href="TEI_Style_PitchPauseTempLoud.css" title="PitchPauseTempLoud">
+
+</head>
+<body>
+<form>
+<input type="submit" onclick="switch_style('Basic');return false;" name="theme" value="Basic" id="Basic">
+<input type="submit" onclick="switch_style('PitchPause');return false;" name="theme" value="PitchPause" id="PitchPause">
+<input type="submit" onclick="switch_style('TempLoud');return false;" name="theme" value="TempLoud" id="TempLoud">
+<input type="submit" onclick="switch_style('PitchPauseTempLoud');return false;" name="theme" value="PitchPauseTempLoud" id="PitchPauseTempLoud">
+</form>
+
+
+<h1>This is Just to Say
+</h1>
+<h2> William Carlos Williams<br>
+  Transc. Mark DiMauro
+</h2>
+
+<p>Reading recorded by Richard Wirtz Emerson, 9 Ridge Road, Rutherford, NJ. Probably broadcast in Voices, WOSU, Columbus. October 7, 1950</p>
+
+<shift feature="loud" new="normal" />
+
+<lg type="stanza">
+  <l>This<pause type="brief"/><shift feature="temp" new="l"/> is just to <shift feature="pitch" new="desc" /> say</l>
+<pause type=medium />
+</lg>
+
+<shift feature="temp" new="m" />
+<shift feature="pitch" new="normal" />
+
+<lg type="stanza">
+  <shift feature="temp" new="m" />
+  <shift feature="pitch" new="normal" />
+    <l>I have eaten</l>
+    <l>the plums</l>
+    <l>that were in</l>
+    <l>the ice box
+      <pause type="brief" />
+      <vocal><desc>exhale </desc></vocal>
+      </l>
+    </shift>
+  </shift>
+</lg>
+
+
+
+<lg type="stanza">
+  <l>and which</l>
+  <l>you were probably</l>
+  <l>saving</l>
+  <l>for <shift feature="pitch" new="desc" /> breakfast  <pause type="medium" />
+  </shift>
+
+  </l>
+</lg>
+
+
+<lg type="stanza">
+  <shift feature="pitch" new="normal" />
+    <l>Forgive me
+      <pause type="brief" />
+    </l>
+
+    <l>they were delicious
+      <pause type="brief" />
+    </l>
+    <l>so sweet</l>
+    <l>and so cold</l>
+  </shift>
+</lg>
+</body>
+
+
+
+<!- This is a script for the style switcher. Paste on any page needing the styles. Checkbox needs to be at the top for selecting->
+<script>// *** TO BE CUSTOMISED ***
+
+var style_cookie_name = "style" ;
+var style_cookie_duration = 30 ;
+var style_domain = "profsherwood.github.io" ;
+
+// *** END OF CUSTOMISABLE SECTION ***
+// You do not need to customise anything below this line
+
+function switch_style ( css_title )
+{
+// You may use this script on your site free of charge provided
+// you do not remove this notice or the URL below. Script from
+// https://www.thesitewizard.com/javascripts/change-style-sheets.shtml
+  var i, link_tag ;
+  for (i = 0, link_tag = document.getElementsByTagName("link") ;
+    i < link_tag.length ; i++ ) {
+    if ((link_tag[i].rel.indexOf( "stylesheet" ) != -1) &&
+      link_tag[i].title) {
+      link_tag[i].disabled = true ;
+      if (link_tag[i].title == css_title) {
+        link_tag[i].disabled = false ;
+      }
+    }
+    set_cookie( style_cookie_name, css_title,
+      style_cookie_duration, style_domain );
+  }
+}
+function set_style_from_cookie()
+{
+  var css_title = get_cookie( style_cookie_name );
+  if (css_title.length) {
+    switch_style( css_title );
+  }
+}
+function set_cookie ( cookie_name, cookie_value,
+    lifespan_in_days, valid_domain )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+    var domain_string = valid_domain ?
+                       ("; domain=" + valid_domain) : '' ;
+    document.cookie = cookie_name +
+                       "=" + encodeURIComponent( cookie_value ) +
+                       "; max-age=" + 60 * 60 *
+                       24 * lifespan_in_days +
+                       "; path=/" + domain_string ;
+}
+function get_cookie ( cookie_name )
+{
+    // https://www.thesitewizard.com/javascripts/cookies.shtml
+    var cookie_string = document.cookie ;
+    if (cookie_string.length != 0) {
+        var cookie_value = cookie_string.match (
+                        '(^|;)[\s]*' +
+                        cookie_name +
+                        '=([^;]*)' );
+        return decodeURIComponent ( cookie_value[2] ) ;
+    }
+    return '' ;
+}</script>
+
+</html>
