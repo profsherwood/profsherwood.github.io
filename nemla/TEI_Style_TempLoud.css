@@ -37,7 +37,7 @@ shift [new='pp']{
   letter-spacing: 0em;
   word-spacing: 0em;
   font-weight: 200
-  color: ;
+  color: green;
 
 }
 
@@ -45,7 +45,7 @@ shift [new='pp']{
 shift [new='p'] {
   font-size: 85%;
   font-weight: 400
-  color: ;
+  color: red;
 }
 
 
@@ -55,6 +55,17 @@ shift [new='normal'] {
 
 }
 
+shift [new='mp'] {
+  font-size: 100%;
+  color: black;
+
+}
+
+shift [new='mf'] {
+  font-size: 100%;
+  color: black;
+
+}
 
 shift [new='f'] {
   font-size: 140%;

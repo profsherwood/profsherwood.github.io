@@ -16,76 +16,37 @@
 <input type="submit" onclick="switch_style('PitchPauseTempLoud');return false;" name="theme" value="PitchPauseTempLoud" id="PitchPauseTempLoud">
 </form>
 
+<shift feature="loud" new="normal">
 
-<h1>This is Just to Say
-</h1>
-<h2> William Carlos Williams<br>
-  Transc. Mark DiMauro
-</h2>
+<h1>Key</h1>
+<p>The following lines reflect how the current CSS styles these lines for tempo, pauses, pitch changes, and volume. Check the "PitchPauseTempoLoudness" button above to see all displayed.</p>
+<shift feature="loud" new="normal">
 
-<p>Reading recorded by Richard Wirtz Emerson, 9 Ridge Road, Rutherford, NJ. Probably broadcast in Voices, WOSU, Columbus. October 7, 1950</p>
-
-<shift feature="loud" new="normal" />
-
-<lg type="stanza">
-  <l>This<pause type="brief"/><shift feature="temp" new="l"/> is just to <shift feature="pitch" new="desc" /> say</l>
-<pause type=medium />
-</lg>
-
-<shift feature="temp" new="m" />
-<shift feature="pitch" new="normal" />
-
-<lg type="stanza">
-  <shift feature="temp" new="m" />
-  <shift feature="pitch" new="normal" />
-    <l>I have eaten</l>
-    <l>the plums</l>
-    <l>that were in</l>
-    <l>the ice box
-      <pause type="brief" />
-      <vocal><desc>exhale </desc></vocal>
-      </l>
-    </shift>
-  </shift>
-</lg>
+<h3>Pitch</h3>
+<l><shift feature="pitch" new="asc">Pitch is rising.</shift></l>
+<l><shift feature="pitch" new="desc">Pitch is falling</shift></l>
 
 
+<h3>Pause</h3>
+<l>Brief pause.  <pause type="brief"/>Medium pause. <pause type="medium"/>Long pause. <pause type="long"/></l>
 
-<lg type="stanza">
-  <l>and which</l>
-  <l>you were probably</l>
-  <l>saving</l>
-  <l>for <shift feature="pitch" new="desc" /> breakfast  <pause type="medium" />
-  </shift>
+<h3>Tempo</h3>
+<l><shift feature="tempo" new="m">Normal Tempo </shift></l>
+<l><shift feature="tempo" new="l">Slow or lento "l"</shift></l>
+<l><shift feature="tempo" new="ll">Very slow or lentissimo "ll" </shift></l>
+<l><shift feature="tempo" new="a">Tempo is quick or allegro "a"</shift></l>
+<l><shift feature="tempo" new="aa">Very quick or allegrissimo "aa"</shift></l>
 
-  </l>
-</lg>
-
-
-<lg type="stanza">
-  <shift feature="pitch" new="normal" />
-    <l>Forgive me
-      <pause type="brief" />
-    </l>
-
-    <l>they were delicious
-      <pause type="brief" />
-    </l>
-    <l>so sweet</l>
-    <l>and so cold</l>
-  </shift>
-</lg>
+<h3>Loudness</h3>
+<l><shift feature="loud" new="pp"> Pianissimo - very soft</shift></l>
+<l><shift feature="loud" new="p"> Piano - soft </shift></l>
+<l><shift feature="loud" new="mp">Mezzo Piano - normal </shift></l>
+<l><shift feature="loud" new="f">Forte - loud</shift></l>
+<l><shift feature="loud" new="ff"> Fortissimo - very loud</shift></l>
 
 
-
-<audio controls>
-  <source src="http://media.sas.upenn.edu/pennsound/authors/Williams-WC/05_Emerson-Recording_08-50/Williams-WC_08_Just-to-Say_prod-Emerson_08-50.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
 
 </body>
-
-
 
 <!- This is a script for the style switcher. Paste on any page needing the styles. Checkbox needs to be at the top for selecting->
 <script>// *** TO BE CUSTOMISED ***
