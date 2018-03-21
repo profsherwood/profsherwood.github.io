@@ -29,3 +29,4 @@ I decided I should probably find out if it is often or frequently used in the fi
 
 As I read it, many of these occurrences are as _similes_.  Further research might require me to count these and then conmpare to some other texts.  Do other writers use "like" as a simile with this frequency? Eight of the first ten "likes" in the first novel are figurative. There is no _automatic_ way to get Voyant to count similes. But this has drawn my attention to the issue. I might then go on to read these and consider what kinds of things are being addressed in this way ... people, ideas, etc. 
 
+
